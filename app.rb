@@ -1,11 +1,17 @@
 require 'sinatra/base'
+require './lib/bookmark.rb'
 
 class BookmarkManager< Sinatra::Base
 enable :sessions
 
   get '/' do
-    'Hello World'
+    erb :index
   end
+
+  get '/bookmarks'do 
+    @bookmark_list = Bookmark.new.all
+    erb :bookmarks
+  end 
 
 end
 
