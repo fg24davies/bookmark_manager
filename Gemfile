@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem 'capybara', '~> 2.7', '>= 2.7.1'
+gem 'pg', '~> 1.2', '>= 1.2.2'
 gem 'rspec', '~> 3.10'
 gem 'sinatra', '~>2.1.0'
 gem 'webrick', '~>1.7.0'

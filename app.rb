@@ -9,7 +9,7 @@ enable :sessions
   end
 
   get '/bookmarks'do 
-    @bookmark_list = Bookmark.new.all
+    @bookmark_list = Bookmark.all
     erb :bookmarks
   end 
 

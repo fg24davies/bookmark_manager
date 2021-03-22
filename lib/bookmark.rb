@@ -1,14 +1,15 @@
-
+require 'pg'
 class Bookmark 
 
   def initialize
-    @bookmark_list = ['https://pomofocus.io/', 'https://github.com/makersacademy/course/blob/master/week_outlines.md', 'https://httpstatusdogs.com/']
+    @bookmark_list = []
   end 
 
   def all 
+    connection = PG.connect(dbname: 'bookmark_manager')
+    result = connection.exec('SELECT url FROM bookmarks')
+    result.each { |bookmark| bookmark.each {|url, website| @bookmark_list << website } }
     @bookmark_list
   end 
-
-
 
 end 
