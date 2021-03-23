@@ -1,4 +1,5 @@
 require 'pg'
+
 class Bookmark 
 
   def initialize
@@ -6,7 +7,12 @@ class Bookmark
   end 
 
   def all 
-    connection = PG.connect(dbname: 'bookmark_manager')
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+    else
+      connection = PG.connect(dbname: 'bookmark_manager')
+    end 
+    
     result = connection.exec('SELECT url FROM bookmarks')
     result.each { |bookmark| bookmark.each {|url, website| @bookmark_list << website } }
     @bookmark_list
