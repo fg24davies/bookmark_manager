@@ -1,16 +1,23 @@
 # Week 4 Afternoon Challenge: Bookmark Manager
 
-## 1. Creating User Stories
+## Creating User Stories
 ```
 As a user
 So that I can see all my bookmarks 
 I want the page to show list of all my bookmarks
-
 ```
 
 Updated domain model picture to include MVC, variable and method names
 
 ![image](https://user-images.githubusercontent.com/30720508/112221064-e55e4480-8c1e-11eb-9f9f-3ee18b316557.png)
+
+Next user story:
+``` 
+As a user
+So that I can easily access websites for later use
+I would like to save a bookmark 
+```
+
 
 
 
