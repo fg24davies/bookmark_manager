@@ -2,11 +2,9 @@ require 'pg'
 
 class Bookmark
 
-  def initialize
-    @bookmark_list = []
-  end
+  @bookmark_list = []
 
-  def all
+  def self.all
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'bookmark_manager_test')
     else
@@ -18,7 +16,7 @@ class Bookmark
     @bookmark_list
   end
 
-  def add(bookmark:)
+  def self.add(bookmark:)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'bookmark_manager_test')
     else

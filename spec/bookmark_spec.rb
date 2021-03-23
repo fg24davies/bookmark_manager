@@ -3,13 +3,12 @@ require './lib/bookmark.rb'
 
 describe Bookmark do
 
-  describe '#all' do
-
-    it '#all' do
+  describe '.all' do
+    it 'shows all bookmarks in the list' do
       connection = PG.connect(dbname: 'bookmark_manager_test')
       connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.twitter.com');")
       connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.google.com');")
-      bookmarks_test = Bookmark.new.all
+      bookmarks_test = Bookmark.all
       expect(bookmarks_test).to include "http://www.twitter.com"
       expect(bookmarks_test).to include "http://www.google.com"
     end
@@ -17,8 +16,8 @@ describe Bookmark do
 
   describe '.add' do
     it 'adds a new bookmark to the bookmark list' do
-      Bookmark.new.add(bookmark: 'http://www.testbookmark.com')
-      expect(Bookmark.new.all).to include 'http://www.testbookmark.com'
+      Bookmark.add(bookmark: 'http://www.testbookmark.com')
+      expect(Bookmark.all).to include 'http://www.testbookmark.com'
     end
   end
 

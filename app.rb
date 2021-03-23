@@ -2,7 +2,7 @@ require 'sinatra/base'
 require './lib/bookmark.rb'
 require 'pg'
 
-class BookmarkManager< Sinatra::Base
+class BookmarkManager < Sinatra::Base
 enable :sessions
 
   get '/' do
@@ -10,7 +10,7 @@ enable :sessions
   end
 
   get '/bookmarks'do
-    @bookmark_list = Bookmark.new.all
+    @bookmark_list = Bookmark.all
     erb :bookmarks
   end
 
@@ -22,7 +22,7 @@ enable :sessions
     # url = params['bookmark']
     # connection = PG.connect(dbname: 'bookmark_manager_test')
     # connection.exec("INSERT INTO bookmarks (url) VALUES ('#{url}');")
-    Bookmark.new.add(bookmark: (params[:bookmark]))
+    Bookmark.add(bookmark: (params[:bookmark]))
     redirect '/bookmarks'
   end
 
