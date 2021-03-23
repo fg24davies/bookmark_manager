@@ -11,12 +11,24 @@ Updated domain model picture to include MVC, variable and method names
 
 ![image](https://user-images.githubusercontent.com/30720508/112221064-e55e4480-8c1e-11eb-9f9f-3ee18b316557.png)
 
-Next user story:
+
+Add bookmarks feature:
 ``` 
 As a user
 So that I can easily access websites for later use
 I would like to save a bookmark 
 ```
+
+Delete bookmarks feature
+Update bookmarks feature:
+Comment on bookmarks
+Tag bookmarks into categories
+Filter bookmarks by tag
+Users manage their bookmarks
+
+
+
+
 
 
 
