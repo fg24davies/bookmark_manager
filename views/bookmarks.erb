@@ -6,6 +6,8 @@
     <li><a href=<%= bookmark.url %>><%= bookmark.title %></a></li>
   <% end %>
 </ul>
+<form action="/bookmarks/new" method="get">
+  <input type="submit" value="Add Bookmark"/>
+</form>
 </body>
 </html>
-
