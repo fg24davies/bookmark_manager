@@ -11,6 +11,9 @@ enable :sessions
 
   get '/bookmarks'do
     @bookmark_list = Bookmark.all
+    # p "--------"
+    # p @bookmark_list
+    # p "--------"
     erb :bookmarks
   end
 
@@ -19,10 +22,7 @@ enable :sessions
   end
 
   post '/bookmarks' do
-    # url = params['bookmark']
-    # connection = PG.connect(dbname: 'bookmark_manager_test')
-    # connection.exec("INSERT INTO bookmarks (url) VALUES ('#{url}');")
-    Bookmark.add(bookmark: (params[:bookmark]))
+    Bookmark.add(url: params[:url], title: params[:title])
     redirect '/bookmarks'
   end
 

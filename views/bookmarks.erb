@@ -3,10 +3,9 @@
 <h1> Your Bookmarks </h1>
 <ul>
   <% @bookmark_list.each do |bookmark| %>
-    <li><%= bookmark %></li>
+    <li><a href=<%= bookmark.url %>><%= bookmark.title %></a></li>
   <% end %>
 </ul>
 </body>
 </html>
 
-<!-- "http://www.netflix.com" -->
