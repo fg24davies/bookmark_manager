@@ -60,6 +60,42 @@
           null
         ]
       },
+      "/Users/floradavies/Projects/makers_weekly_challenges/bookmark_manager/spec/database_connection_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/floradavies/Projects/makers_weekly_challenges/bookmark_manager/spec/features/adding_bookmarks_spec.rb": {
         "lines": [
           1,
@@ -147,6 +183,6 @@
         ]
       }
     },
-    "timestamp": 1616763885
+    "timestamp": 1616778456
   }
 }

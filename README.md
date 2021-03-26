@@ -19,16 +19,25 @@ So that I can easily access websites for later use
 I would like to save a bookmark 
 ```
 
-Delete bookmarks feature
+Delete bookmarks feature:
+``` 
+As a user
+So that I can remove websites I no longer use from my bookmarks
+I would like to delete a bookmark
+```
 Update bookmarks feature:
+
+```
+As a user
+So that I can make changes to bookmarks
+I would like to update a bookmark
+```
+
+
 Comment on bookmarks
 Tag bookmarks into categories
 Filter bookmarks by tag
 Users manage their bookmarks
-
-
-
-
 
 
 
