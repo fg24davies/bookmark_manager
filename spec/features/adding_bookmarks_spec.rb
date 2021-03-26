@@ -6,7 +6,7 @@ feature 'Add bookmarks' do
   scenario 'there is an add bookmarks button' do
     visit '/bookmarks'
     expect(page).to have_content("Your Bookmarks")
-    expect(page).to have_content("Add Bookmark")
+    expect(page).to have_button("Add Bookmark")
   end 
 
   scenario 'User can add to bookmarks to the bookmark manager' do

@@ -1,13 +1,25 @@
 <html>
+
 <body>
-<h1> Your Bookmarks </h1>
-<ul>
-  <% @bookmark_list.each do |bookmark| %>
-    <li><a href=<%= bookmark.url %>><%= bookmark.title %></a></li>
-  <% end %>
-</ul>
-<form action="/bookmarks/new" method="get">
-  <input type="submit" value="Add Bookmark"/>
-</form>
+  <h1> Your Bookmarks </h1>
+  <ul>
+    <% @bookmark_list.each do |bookmark| %>
+      <li class="bookmark" id="bookmark-<%= bookmark.id %>">
+        <a href=<%= bookmark.url %>><%= bookmark.title %></a>
+        <br>
+        <form action="/bookmarks/<%= bookmark.id %>" method="post"> 
+          <input type="hidden" name="_method" value="DELETE">
+          <input type='submit' value='delete'>  
+        </form> <form action="/bookmarks/<%= bookmark.id %>/update" method="get">
+            <input type='submit' value='update'>
+        </form>
+        <br>
+      </li>   
+    <% end %>
+  </ul>
+  <form action="/bookmarks/new" method="get">
+    <input type="submit" value="Add Bookmark"/>
+  </form>
 </body>
+
 </html>
